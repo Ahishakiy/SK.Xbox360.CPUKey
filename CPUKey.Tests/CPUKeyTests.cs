@@ -4,15 +4,13 @@ public class CPUKeyTests
 {
 	#region Test Data
 
-	private static readonly List<(string Data, string Info)> _validDataSource = new()
-	{
+	private static readonly List<(string Data, string Info)> _validDataSource = [
 		("C0DE8DAAE05493BCB0F1664FB1751F00", "uppercase"),
 		("c0de8daae05493bcb0f1664fb1751f00", "lowercase"),
 		("C0DE8daae05493bcb0f1664fb1751F00", "mixed case"),
-	};
+	];
 
-	private static readonly List<(string Data, string Info)> _malformedDataSource = new()
-	{
+	private static readonly List<(string Data, string Info)> _malformedDataSource = [
 		// strings and byte arrays
 		("",                                   "empty"),
 		("00000000000000000000000000000000",   "all zeros"),
@@ -24,7 +22,7 @@ public class CPUKeyTests
 		("C0DE DAAE05493BCB0F1664FB175 F00",   "with spaces"),
 		("STELIOKONTOSCANTC0DECLIFTONMSAID",   "non-hex chars"),
 		("C0DE8DAAE05493BCB0F1664FB1751F0",    "not a multiple of 2"),
-	};
+	];
 
 	/// <remarks>
 	/// The Hamming Weight is invalidated by flipping one of the first 106 bits, ensuring a popcount other than 53.
@@ -32,13 +30,12 @@ public class CPUKeyTests
 	/// </remarks>
 	/// <seealso cref="CPUKey.ValidateHammingWeight"/>
 	/// <seealso cref="CPUKey.ComputeECD"/>
-	private static readonly List<(string Data, bool ExpectedHammingWeight, bool ExpectedECD, string Info)> _invalidDataSource = new()
-	{
+	private static readonly List<(string Data, bool ExpectedHammingWeight, bool ExpectedECD, string Info)> _invalidDataSource = [
 											  ("C0DE8DAAE05493BCB0F1664FB1751F00",   ExpectedHammingWeight: true,  ExpectedECD: true,  "Hamming Weight: valid, ECD: valid"),
 								(InvalidateECD("C0DE8DAAE05493BCB0F1664FB1751F00"),  ExpectedHammingWeight: true,  ExpectedECD: false, "Hamming Weight: valid, ECD: invalid"),
 					  (InvalidateHammingWeight("C0DE8DAAE05493BCB0F1664FB1751F00"),  ExpectedHammingWeight: false, ExpectedECD: true,  "Hamming Weight: invalid, ECD: valid"),
 		(InvalidateECD(InvalidateHammingWeight("C0DE8DAAE05493BCB0F1664FB1751F00")), ExpectedHammingWeight: false, ExpectedECD: false, "Hamming Weight: invalid, ECD: invalid"),
-	};
+	];
 
 	public static IEnumerable<object[]> ValidDataGenerator(Type type)
 		=> from x in _validDataSource
