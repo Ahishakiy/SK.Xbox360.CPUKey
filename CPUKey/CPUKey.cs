@@ -1,9 +1,25 @@
 ﻿/*
- * CPUKey class - v3.2.1
+ * An immutable .NET data type for Xbox 360 CPUKeys, offering value semantics
+ * with optimized parsing, validation, conversion, and utility operations.
+ * Suitable for use in collections requiring fast look-up and equality checks.
+ *
  * Created: 01/20/2020
  * Author:  Daniel McClintock (alias: Stelio Kontos)
  *
  * Copyright (c) 2020 Daniel McClintock
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 using System.Diagnostics.CodeAnalysis;
@@ -472,7 +488,7 @@ public sealed class CPUKey : IEquatable<CPUKey>, IComparable<CPUKey>
 	/// <typeparam name="T">The type of elements in the span.</typeparam>
 	/// <param name="span">The span to evaluate.</param>
 	/// <param name="predicate">The predicate to test each element.</param>
-	/// <returns><c>true</c> if every element matches the predicate; otherwise, <c>false</c>.</returns>
+	/// <returns>True if every element matches the predicate; otherwise, false.</returns>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	private static bool All<T>(ReadOnlySpan<T> span, Predicate<T> predicate)
 	{

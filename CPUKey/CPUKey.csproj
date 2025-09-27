@@ -7,9 +7,10 @@
     <PackageId>SK.Xbox360.CPUKey</PackageId>
     <Version>1.0.0</Version>
     <Authors>Stelio Kontos</Authors>
-    <Description>Xbox 360 CPUKey parsing and validation library.</Description>
-    <PackageTags>xbox;xdk;xbox360;cpukey;security;cryptography;</PackageTags>
+    <Description>An immutable .NET data type for Xbox 360 CPUKeys, offering value semantics with optimized parsing, validation, conversion, and utility operations. Suitable for use in collections requiring fast look-up and equality checks.</Description>
+    <PackageTags>xbox;xbox360;xbox-360;data-type;xdk;cpukey;security;cryptography;</PackageTags>
     <RepositoryUrl>https://github.com/Ste1io/SK.Xbox360.CPUKey</RepositoryUrl>
+    <PackageLicenseExpression>GPL-3.0</PackageLicenseExpression>
   </PropertyGroup>
 
 </Project>
