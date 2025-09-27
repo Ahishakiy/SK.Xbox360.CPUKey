@@ -1,4 +1,4 @@
-﻿namespace SK.Xbox360.CPUKey.Tests;
+﻿namespace SK.Xbox360.Tests;
 
 public class CPUKeyTests
 {
@@ -34,9 +34,9 @@ public class CPUKeyTests
 	/// <seealso cref="CPUKey.ComputeECD"/>
 	private static readonly List<(string Data, bool ExpectedHammingWeight, bool ExpectedECD, string Info)> _invalidDataSource = new()
 	{
-		                                      ("C0DE8DAAE05493BCB0F1664FB1751F00",   ExpectedHammingWeight: true,  ExpectedECD: true,  "Hamming Weight: valid, ECD: valid"),
-		                        (InvalidateECD("C0DE8DAAE05493BCB0F1664FB1751F00"),  ExpectedHammingWeight: true,  ExpectedECD: false, "Hamming Weight: valid, ECD: invalid"),
-		              (InvalidateHammingWeight("C0DE8DAAE05493BCB0F1664FB1751F00"),  ExpectedHammingWeight: false, ExpectedECD: true,  "Hamming Weight: invalid, ECD: valid"),
+											  ("C0DE8DAAE05493BCB0F1664FB1751F00",   ExpectedHammingWeight: true,  ExpectedECD: true,  "Hamming Weight: valid, ECD: valid"),
+								(InvalidateECD("C0DE8DAAE05493BCB0F1664FB1751F00"),  ExpectedHammingWeight: true,  ExpectedECD: false, "Hamming Weight: valid, ECD: invalid"),
+					  (InvalidateHammingWeight("C0DE8DAAE05493BCB0F1664FB1751F00"),  ExpectedHammingWeight: false, ExpectedECD: true,  "Hamming Weight: invalid, ECD: valid"),
 		(InvalidateECD(InvalidateHammingWeight("C0DE8DAAE05493BCB0F1664FB1751F00")), ExpectedHammingWeight: false, ExpectedECD: false, "Hamming Weight: invalid, ECD: invalid"),
 	};
 

@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CPUKey\SK.Xbox360.CPUKey.csproj" />
+    <ProjectReference Include="..\CPUKey\CPUKey.csproj" />
   </ItemGroup>
 
 </Project>

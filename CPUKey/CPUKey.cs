@@ -31,7 +31,7 @@ using System.Text;
 
 [assembly: InternalsVisibleTo("CPUKey.Tests")]
 
-namespace SK.Xbox360.CPUKey;
+namespace SK.Xbox360;
 
 /// <summary>
 /// Encapsulates an immutable 16-byte (32-character hexadecimal) Xbox 360 CPUKey, and provides parsing, validation, conversion, and utility
