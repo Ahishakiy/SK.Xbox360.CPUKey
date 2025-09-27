@@ -1,6 +1,4 @@
-﻿using SK;
-
-namespace XboxKonnect.Tests;
+﻿namespace SK.Xbox360.CPUKey.Tests;
 
 public class CPUKeyTests
 {
