@@ -4,13 +4,35 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <PackageId>SK.Xbox360.CPUKey</PackageId>
     <Version>1.0.0</Version>
     <Authors>Stelio Kontos</Authors>
+    <Company>Stelio Kontos</Company>
     <Description>An immutable .NET data type for Xbox 360 CPUKeys, offering value semantics with optimized parsing, validation, conversion, and utility operations. Suitable for use in collections requiring fast look-up and equality checks.</Description>
-    <PackageTags>xbox;xbox360;xbox-360;data-type;xdk;cpukey;security;cryptography;</PackageTags>
+    <PackageTags>xbox;xbox360;xbox-360;xdk;cpukey;cryptography;parsing;data-type;</PackageTags>
+    <PackageProjectUrl>https://github.com/Ste1io/SK.Xbox360.CPUKey</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Ste1io/SK.Xbox360.CPUKey</RepositoryUrl>
-    <PackageLicenseExpression>GPL-3.0</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="" Link="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
 
 </Project>

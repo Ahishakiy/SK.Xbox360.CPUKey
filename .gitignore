@@ -4,9 +4,13 @@
 ipch/
 obj/
 
+Properties/
+
 bin/
 Release_LTCG/
 Release/
 Debug/
 
-Properties/
+pkgs/
+*.nupkg
+*.snupkg

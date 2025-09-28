@@ -1,6 +1,7 @@
 # SK.Xbox360.CPUKey
 
 [![.NET 9.0](https://img.shields.io/badge/.NET-9.0-purple.svg)](https://dotnet.microsoft.com/download/dotnet/9.0)
+[![NuGet](https://img.shields.io/nuget/v/SK.Xbox360.CPUKey.svg)](https://www.nuget.org/packages/SK.Xbox360.CPUKey/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 An immutable .NET data type for Xbox 360 CPUKeys, offering value semantics with optimized parsing, validation, conversion, and utility operations. Designed for high-performance scenarios with zero-allocation span-based APIs and suitable for use in collections requiring fast look-up, equality checks, and sorting.
