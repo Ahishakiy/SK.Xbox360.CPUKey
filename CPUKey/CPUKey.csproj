@@ -10,7 +10,7 @@
 
   <PropertyGroup>
     <PackageId>SK.Xbox360.CPUKey</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Stelio Kontos</Authors>
     <Company>Stelio Kontos</Company>
     <Description>An immutable .NET data type for Xbox 360 CPUKeys, offering value semantics with optimized parsing, validation, conversion, and utility operations. Suitable for use in collections requiring fast look-up and equality checks.</Description>
@@ -25,6 +25,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReleaseNotes>Trimmed NuGet README content and republished as 1.0.1.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
